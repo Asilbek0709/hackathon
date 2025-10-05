@@ -1,0 +1,191 @@
+.about {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, var(--background-light) 0%, var(--tertiary-light) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+html.dark .about {
+  background: linear-gradient(180deg, var(--background-dark) 0%, var(--secondary-dark) 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+html.dark .title {
+  background: linear-gradient(135deg, var(--primary-dark), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-light);
+}
+
+html.dark .subtitle {
+  color: var(--text-dark);
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+html.dark .description {
+  color: var(--text-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+html.dark .card {
+  background: rgba(26, 34, 76, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cardIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--primary-light);
+}
+
+html.dark .cardTitle {
+  color: var(--primary-dark);
+}
+
+.cardText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+html.dark .cardText {
+  color: var(--text-dark);
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.valueCard {
+  background: rgba(242, 164, 32, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 4px solid var(--primary-light);
+  transition: all 0.3s ease;
+}
+
+html.dark .valueCard {
+  background: rgba(228, 139, 90, 0.1);
+  border-left-color: var(--primary-dark);
+}
+
+.valueCard:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.valueTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primary-light);
+}
+
+html.dark .valueTitle {
+  color: var(--primary-dark);
+}
+
+.valueText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  opacity: 0.85;
+}
+
+html.dark .valueText {
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+  }
+}

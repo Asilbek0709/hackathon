@@ -1,0 +1,169 @@
+.trainers {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: var(--text-light);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.filters {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.filters h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.filterButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filterBtn {
+  padding: 0.75rem 1.5rem;
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.filterBtn:hover {
+  background: var(--primary);
+  color: var(--text-light);
+}
+
+.filterBtn.active {
+  background: var(--accent);
+  color: var(--text-light);
+}
+
+.trainersList {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.trainersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.trainerCard {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.trainerCard:hover {
+  transform: translateY(-5px);
+}
+
+.trainerImage {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.trainerImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainerInfo {
+  padding: 1.5rem;
+}
+
+.trainerInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1rem;
+}
+
+.experience {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.sports {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.sportTag {
+  padding: 0.25rem 0.75rem;
+  background: var(--primary);
+  color: var(--text-light);
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+.bio {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.contactBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--accent);
+  color: var(--text-light);
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.contactBtn:hover {
+  background: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .trainersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterButtons {
+    flex-direction: column;
+  }
+}

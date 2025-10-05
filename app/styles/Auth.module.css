@@ -1,0 +1,191 @@
+.authModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.authContent {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  position: relative;
+}
+
+.dark .authContent {
+  background: var(--secondary-dark);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  width: 30px;
+  height: 30px;
+}
+
+.dark .closeBtn {
+  color: var(--text-dark);
+}
+
+.authTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-light);
+}
+
+.dark .authTitle {
+  color: var(--primary-dark);
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+}
+
+.formGroup input {
+  padding: 0.8rem;
+  border: 2px solid var(--tertiary-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--background-light);
+  color: var(--text-light);
+}
+
+.dark .formGroup input {
+  background: var(--background-dark);
+  color: var(--text-dark);
+  border-color: var(--secondary-dark);
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+}
+
+.dark .formGroup input:focus {
+  border-color: var(--primary-dark);
+}
+
+.submitBtn {
+  padding: 1rem;
+  background: var(--primary-light);
+  color: white;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.dark .submitBtn {
+  background: var(--primary-dark);
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.divider span {
+  background: white;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dark .divider span {
+  background: var(--secondary-dark);
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border: 2px solid var(--tertiary-light);
+  border-radius: 8px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.dark .googleBtn {
+  background: var(--background-dark);
+  border-color: var(--secondary-dark);
+}
+
+.googleBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.switchMode {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.switchMode button {
+  background: transparent;
+  color: var(--primary-light);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.dark .switchMode button {
+  color: var(--primary-dark);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

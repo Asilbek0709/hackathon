@@ -1,0 +1,360 @@
+.profileContainer {
+  min-height: 100vh;
+  padding: 8rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profileHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.6s ease;
+}
+
+.profileAvatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  /* Added animation on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileAvatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+html.dark .profileAvatar {
+  background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+}
+
+.profileName {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-light);
+  /* Added text animation */
+  animation: fadeInUp 0.8s ease;
+}
+
+html.dark .profileName {
+  color: var(--primary-dark);
+}
+
+.profileEmail {
+  opacity: 0.7;
+  font-size: 1.1rem;
+  animation: fadeInUp 1s ease;
+}
+
+.profileContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.profileCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease;
+  /* Added hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+html.dark .profileCard {
+  background: var(--secondary-dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-light);
+  border-bottom: 2px solid var(--tertiary-light);
+  padding-bottom: 0.5rem;
+}
+
+html.dark .cardTitle {
+  color: var(--primary-dark);
+  border-color: var(--background-dark);
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  /* Added smooth transition */
+  transition: background-color 0.2s ease;
+}
+
+.infoItem:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 8px;
+}
+
+html.dark .infoItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html.dark .infoItem:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.infoLabel {
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.editBtn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary-light);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+html.dark .editBtn {
+  background: var(--primary-dark);
+}
+
+.editBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
+}
+
+.logoutBtn {
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background: #e74c3c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Added new styles for Activities section */
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--background-light);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+html.dark .activityItem {
+  background: var(--background-dark);
+}
+
+.activityItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activityIcon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tertiary-light);
+  border-radius: 50%;
+}
+
+html.dark .activityIcon {
+  background: var(--secondary-dark);
+}
+
+.activityInfo {
+  flex: 1;
+}
+
+.activityName {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-light);
+}
+
+html.dark .activityName {
+  color: var(--text-dark);
+}
+
+.activityDate {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+
+.achievementGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.achievementBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--background-light);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+html.dark .achievementBadge {
+  background: var(--background-dark);
+}
+
+.achievementBadge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.badgeIcon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.badgeName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-light);
+}
+
+html.dark .badgeName {
+  color: var(--text-dark);
+}
+
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eventItem {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--background-light);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+html.dark .eventItem {
+  background: var(--background-dark);
+}
+
+.eventItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-light);
+  color: white;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+html.dark .eventDate {
+  background: var(--primary-dark);
+}
+
+.eventDay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.eventMonth {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.eventDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eventName {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-light);
+}
+
+html.dark .eventName {
+  color: var(--text-dark);
+}
+
+.eventLocation {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .achievementGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

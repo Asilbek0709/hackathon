@@ -1,0 +1,175 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(247, 245, 242, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark .header {
+  background: rgba(13, 18, 52, 0.95);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-light);
+  animation: fadeInLeft 0.6s ease;
+}
+
+.dark .logo {
+  color: var(--primary-dark);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-light);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.dark .navLink::after {
+  background: var(--primary-dark);
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.langSelector {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: var(--tertiary-light);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark .langSelector {
+  background: var(--secondary-dark);
+  color: var(--text-dark);
+}
+
+.langSelector:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.authButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.signInBtn,
+.signUpBtn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.signInBtn {
+  background: transparent;
+  border: 2px solid var(--primary-light);
+  color: var(--primary-light);
+}
+
+.dark .signInBtn {
+  border-color: var(--primary-dark);
+  color: var(--primary-dark);
+}
+
+.signUpBtn {
+  background: var(--primary-light);
+  color: white;
+}
+
+.dark .signUpBtn {
+  background: var(--primary-dark);
+}
+
+.signInBtn:hover,
+.signUpBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profileBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.dark .profileBtn {
+  background: var(--primary-dark);
+}
+
+.profileBtn:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .headerContent {
+    flex-wrap: wrap;
+  }
+}
